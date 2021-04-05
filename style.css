@@ -1,0 +1,41 @@
+
+
+.buttons-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.btn{
+    padding: 20px;
+    border: 2px;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.calculator{
+    max-width: 400px;
+    border: 2px solid;
+    border-radius: 15px;
+    margin: 30px auto;
+    padding: 20px;
+
+}
+
+.screen{
+    min-height: 80px;
+    padding: 20px;
+    border: 2px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 29px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.span-2 {
+    grid-column: span 2;
+  }
