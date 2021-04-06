@@ -1,4 +1,6 @@
-
+body{
+    background-color: lightgray;
+}
 
 .buttons-grid{
     display: grid;
@@ -13,6 +15,10 @@
     font-size: 20px;
     outline: none;
     cursor: pointer;
+}
+
+.btn:hover{
+    background-color: aquamarine;
 }
 
 .calculator{
