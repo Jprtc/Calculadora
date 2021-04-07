@@ -4,6 +4,7 @@ const clearButton = document.querySelector("[data-clear]")
 const deleteButton = document.querySelector("[data-delete]")
 const operatorButtons = document.querySelectorAll("[data-operator]")
 const equalsButton = document.querySelector("[data-equals]")
+const pointButton = document.querySelector("[data-point]")
 
 let shouldResetScreen = false
 
@@ -39,6 +40,7 @@ operatorButtons.forEach((button) =>
 clearButton.addEventListener("click",clear)
 deleteButton.addEventListener("click",deleteNumber)
 equalsButton.addEventListener("click",validate)
+pointButton.addEventListener("click",colocarPonto)
 
 
 function appendNumber(number) {
@@ -62,7 +64,7 @@ function validate(){
     } 
     secondOperand = screen.textContent
     screen.textContent = operate(currentOperation,firstOperand,secondOperand)
-    currentOperation = null;
+    currentOperation = null; // É importante que essa variável sempre volte a ser nula após a operação ser concluída.
 }
 
 function operate(operator,a,b){
@@ -99,3 +101,8 @@ function deleteNumber(){
     screen.textContent = screen.textContent.toString().slice(0,-1)
 }
 
+function colocarPonto(){
+    if (screen.textContent === "") screen.textContent = "0"
+    if (screen.textContent.includes(".")) return
+    screen.textContent += "."
+}

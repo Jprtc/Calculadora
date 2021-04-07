@@ -1,5 +1,5 @@
 body{
-    background-color: lightgray;
+    background-color: rgb(224, 221, 221);
 }
 
 .buttons-grid{
@@ -15,10 +15,17 @@ body{
     font-size: 20px;
     outline: none;
     cursor: pointer;
+    box-shadow: 0 3.5px #999
 }
 
 .btn:hover{
-    background-color: aquamarine;
+    background-color: rgb(211, 233, 240);
+}
+
+.btn:active{
+    transform: translateY(4px);
+    box-shadow: 0 1px #666;
+    background-color: rgb(142, 190, 206);
 }
 
 .calculator{
@@ -27,6 +34,7 @@ body{
     border-radius: 15px;
     margin: 30px auto;
     padding: 20px;
+    background-color: #bbb7b8;
 
 }
 
@@ -40,6 +48,7 @@ body{
     text-align: right;
     word-wrap: break-word;
     word-break: break-all;
+    background-color: snow;
 }
 
 .span-2 {
