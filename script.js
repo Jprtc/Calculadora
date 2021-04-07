@@ -5,6 +5,7 @@ const deleteButton = document.querySelector("[data-delete]")
 const operatorButtons = document.querySelectorAll("[data-operator]")
 const equalsButton = document.querySelector("[data-equals]")
 const pointButton = document.querySelector("[data-point]")
+const roundButton = document.querySelector("[data-round]")
 
 let shouldResetScreen = false
 
@@ -28,6 +29,14 @@ function dividir(a,b){
     return a/b
 }
 
+function potencia(a,b){
+    return a**b
+}
+
+function round(){
+    screen.textContent = Math.round(screen.textContent * 1000)/1000;
+}
+
 //EVENT FOR THE BUTTONS
 numberButtons.forEach((button) =>
   button.addEventListener("click", () => appendNumber(button.textContent))
@@ -41,6 +50,7 @@ clearButton.addEventListener("click",clear)
 deleteButton.addEventListener("click",deleteNumber)
 equalsButton.addEventListener("click",validate)
 pointButton.addEventListener("click",colocarPonto)
+roundButton.addEventListener("click",round)
 
 
 function appendNumber(number) {
@@ -77,6 +87,8 @@ function operate(operator,a,b){
             return subtrair(a,b);
         case "x":
             return multiplicar(a,b);
+        case "^":
+            return potencia(a,b);
         case "÷":
             if (b === 0) return null;
             else return dividir(a,b);
